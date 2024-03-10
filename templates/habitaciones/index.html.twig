@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Añadir Habitaciones{% endblock %}
+
+{% block body %}
+
+<article class="w-100 pt-5 pb-5 bg-light row justify-content-center align-items-center">
+
+    {# FOTO #}
+    <section class="col-lg-4 col-md-6 col-sm-12">
+        <img class="responsive mx-auto d-block" src="https://www.rusticae.com/images/hotel/hotel-el-jardin-vertical/1/370x538_c1bf710a4b97ce14b1d3e5b1b59ee823.jpg" alt="Logo" >
+    </section>
+
+    {# FORMULARIO #}
+
+    <section class="w-25 col-lg-4 col-md-6 col-sm-12 ">
+        <br>
+        {{ form_start(miForm) }}
+        <div class="card rounded-lg border bg-light text-dark shadow-sm">
+            <div class="card-body">
+                <h3 class="card-title">Añadir nueva habitación</h3> 
+                <p class="card-text">Ingrese los detalles de la habitación a continuación</p>
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <label for="room-number" class="form-label">Número de habitación</label>
+                    {{ form_widget(miForm.numero, { 'attr': {'class': 'form-control', 'placeholder': 'Número de habitación'} }) }}
+                </div>
+                <div class="mb-3">
+                    <label for="price" class="form-label">Precio por noche</label>
+                    {{ form_widget(miForm.precioNoche, { 'attr': {'class': 'form-control', 'placeholder': 'Precio por noche'} }) }}
+                </div>
+                <div class="mb-3 form-check">
+                    {{ form_widget(miForm.disponible, { 'attr': {'class': 'form-check-input'} }) }}
+                    <label class="form-check-label" for="{{ miForm.disponible.vars.id }}">Disponible</label>
+                </div>
+            </div>
+            <div class="card-footer">
+                {{ form_end(miForm) }}
+            </div>
+        </div>
+
+    </section>
+</article>
+{% endblock %}

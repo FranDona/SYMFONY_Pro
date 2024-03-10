@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Reservas, Habitaciones y Clientes{% endblock %}
+
+{% block body %}
+<section class="mt-5 pt-5 pb-5 bg-light row justify-content-center align-items-center">
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+        {% for resultado in resultados %}
+            <div class="col">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">Número Habitación: {{ resultado.numero_habitacion }}</h5>
+                        <p class="card-text">Fecha de Inicio: {{ resultado.fechaInicio|date('Y-m-d H:i:s') }}</p>
+                        <p class="card-text">Fecha de Fin: {{ resultado.fechaFin|date('Y-m-d H:i:s') }}</p>
+                        <p class="card-text">DNI Cliente: {{ resultado.dni_cliente }}</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

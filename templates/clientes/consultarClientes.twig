@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Lista de Clientes{% endblock %}
+
+{% block body %}    <section class=" ">
+
+
+<section class="w-100 pt-5 pb-5 bg-light row justify-content-center align-items-center">
+    <div class="row justify-content-center">
+        {% for clientes in cliente %}
+        <div class="col-md-6 col-lg-3">
+            <div class="card mb-3">
+                <div class="card-body shadow">
+                    <h5 class="card-title">{{ clientes.dni }}</h5>
+                    <p class="card-text"><strong>Nombre:</strong> {{ clientes.nombre }}</p>
+                    <p class="card-text"><strong>Apellido:</strong> {{ clientes.apellido }}</p>
+                    <p class="card-text"><strong>Teléfono:</strong> {{ clientes.telefono }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+{% endblock %}

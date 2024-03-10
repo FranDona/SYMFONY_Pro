@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Editar Habitacion{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <div class="card rounded-lg border bg-light shadow-sm w-25 mx-auto">
+        <div class="card-body">
+            <div class="d-flex flex-row align-items-start">
+                <div>
+                    <h3 class="fw-bold">Editar habitación</h3>
+                    <p>Realiza los cambios necesarios.</p>
+                </div>
+            </div>
+            <div class="mt-1">
+                {{ form_start(miForm) }}
+                <form>
+                    <div class="mb-3">
+                        {{ form_row(miForm.numero) }}
+                    </div>
+                    <div class="mb-3">
+                        {{ form_row(miForm.precioNoche) }}
+                    </div>
+                    <div class="mb-3">
+                        {{ form_row(miForm.disponible) }}
+                    </div>
+                    <div class="d-flex justify-content-start">
+                        {{ form_end(miForm) }}
+                        <a href="http://localhost:8000/habitaciones/consultar" class="btn btn-secondary">Cancelar</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>    
+{% endblock %}

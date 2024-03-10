@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Añadir Clientes{% endblock %}
+
+{% block body %}
+
+<article class="w-100 pt-5 pb-5 bg-light row justify-content-center align-items-center">
+
+    {# FOTO #}
+    <section class="col-lg-4 col-md-6 col-sm-12">
+        <img class="responsive mx-auto d-block" src="https://st2.depositphotos.com/1643295/7949/i/450/depositphotos_79495794-stock-photo-business-people-shaking-hands.jpg" width="330" alt="Zona Añadir Clientes" >
+    </section>
+
+    {# FORMULARIO #}
+
+<section class="w-25 col-lg-4 col-md-6 col-sm-12 ">
+    <br>
+    {{ form_start(miForm) }}
+    <div class="card rounded-lg border bg-light text-dark shadow-sm">
+        <div class="card-body">
+            <h3 class="card-title">Añadir nuevo Cliente</h3>
+            <p class="card-text">Ingrese los datos del cliente</p>
+        </div>
+        <div class="card-body">
+            <div class="row mb-3">
+                <div class="col">
+                    <label for="room-number" class="form-label">Nombre</label>
+                    {{ form_widget(miForm.nombre, { 'attr': {'class': 'form-control', 'placeholder': 'Nombre'} }) }}
+                </div>
+                <div class="col">
+                    <label for="price" class="form-label">Apellido</label>
+                    {{ form_widget(miForm.apellido, { 'attr': {'class': 'form-control', 'placeholder': 'Apellido'} }) }}
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="price" class="form-label">Nº Telefono</label>
+                {{ form_widget(miForm.telefono, { 'attr': {'class': 'form-control', 'placeholder': 'Número de Teléfono'} }) }}
+            </div>
+            <div class="mb-3">
+                <label for="price" class="form-label">DNI</label>
+                {{ form_widget(miForm.dni, { 'attr': {'class': 'form-control', 'placeholder': 'Número de Teléfono'} }) }}
+            </div>
+        </div>
+        <div class="card-footer">
+            {{ form_end(miForm) }}
+        </div>
+    </div>
+</section>
+
+</article>
+
+
+{% endblock %}

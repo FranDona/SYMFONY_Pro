@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Consultar Habitaciones{% endblock %}
+
+{% block body %}
+
+<section class="w-100 pt-5 pb-5 bg-light row justify-content-center align-items-center">
+    <div class="row justify-content-center">
+        {% for habitacion in habitaciones %}
+        <div class="col-md-6 col-lg-4">
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Nº de Habitación: {{ habitacion.numero }}</h5>
+                    <p class="card-text"><strong>Precio por Noche:</strong> {{ habitacion.precioNoche }}€</p>
+                    <p class="card-text"><strong>Disponible:</strong>
+                        {% if habitacion.disponible %}
+                            <i class="fa-solid fa-circle-check fa-xl" style="color: #2ec27e;"></i>
+                        {% else %}
+                            <i class="fa-solid fa-circle-xmark fa-xl" style="color: #c01c28;"></i>
+                        {% endif %}
+                    </p>
+                    <div class="btn-group" aria-label="Acciones">
+                        <a href="{{ path('app_habitaciones_editar', {'numero': habitacion.numero}) }}" class="btn btn-primary">Editar</a>
+                        <form action="{{ path('app_eliminar_habitacion', {'numero': habitacion.numero}) }}" method="post" onsubmit="return confirm('¿Estás seguro de que quieres eliminar esta habitación?')">
+                            <button type="submit" class="btn btn-danger">Eliminar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+{% endblock %}

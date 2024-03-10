@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Añadir Reservas{% endblock %}
+
+{% block body %}
+
+<article class="w-100 pt-5 pb-5 bg-light row justify-content-center align-items-center">
+
+    {# FOTO #}
+    <section class="col-lg-4 col-md-6 col-sm-12">
+        <img class="responsive mx-auto d-block" src="https://img.freepik.com/fotos-premium/feliz-joven-morena-recepcionista-hotel-moderno-pie-junto-al-mostrador-recepcion-mirandote-mientras-espera-nuevos-huespedes_274679-18497.jpg" width="385" alt="Logo" >
+    </section>
+
+    {# FORMULARIO #}
+
+    <section class="w-25 col-lg-4 col-md-6 col-sm-12 ">
+        <br>
+        {{ form_start(miForm) }}
+        <div class="card rounded-lg border bg-light text-dark shadow-sm">
+            <div class="card-body">
+                <h3 class="card-title">Añadir nueva Reserva</h3>
+                <p class="card-text">Ingrese los datos de la reserva</p>
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <label for="fecha-inicio" class="form-label">Fecha de Inicio</label>
+                    {{ form_widget(miForm.fechaInicio, { 'attr': {'class': 'form-control'} }) }}
+                </div>
+                <div class="mb-3">
+                    <label for="fecha-fin" class="form-label">Fecha de Fin</label>
+                    {{ form_widget(miForm.fechaFin, { 'attr': {'class': 'form-control'} }) }}
+                </div>
+                <div class="mb-3">
+                    <label for="habitacion" class="form-label">Habitación</label>
+                    {{ form_widget(miForm.habitacion, { 'attr': {'class': 'form-control'} }) }}
+                </div>
+                <div class="mb-3">
+                    <label for="cliente" class="form-label">Cliente</label>
+                    {{ form_widget(miForm.cliente, { 'attr': {'class': 'form-control'} }) }}
+                </div>
+            </div>
+            <div class="card-footer">
+                {{ form_end(miForm) }}
+            </div>
+        </div>
+    </section>
+</article>
+
+
+{% endblock %}

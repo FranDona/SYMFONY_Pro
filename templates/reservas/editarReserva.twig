@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Editar Reserva{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <div class="card rounded-lg border bg-light shadow-sm w-25 mx-auto">
+        <div class="card-body">
+            <h1 class="text-center">Editar Reserva</h1>
+            {{ form_start(formulario) }}
+            <div class="mb-3">
+                {{ form_row(formulario.fechaInicio, { 'attr': {'class': 'form-control'} }) }}
+            </div>
+            <div class="mb-3">
+                {{ form_row(formulario.fechaFin, { 'attr': {'class': 'form-control'} }) }}
+            </div>
+            <div class="mb-3">
+                {{ form_row(formulario.habitacion, { 'attr': {'class': 'form-control'} }) }}
+            </div>
+            <div class="mb-3">
+                {{ form_row(formulario.cliente, { 'attr': {'class': 'form-control'} }) }}
+            </div>
+            <div class="text-center btn-group">
+                {{ form_end(formulario) }}
+                <a href="http://localhost:8000/reservas/consultar" class="btn btn-secondary">Cancelar</a>
+            </div>
+            
+        </div>
+    </div>
+</div>
+{% endblock %}

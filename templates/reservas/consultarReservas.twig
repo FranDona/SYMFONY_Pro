@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Lista de Reservas{% endblock %}
+
+{% block body %}
+
+<section class="w-100 pt-5 pb-5 bg-light row justify-content-center align-items-center">
+    <div class="row justify-content-center">
+        {% for reservas in reserva %}
+        <div class="col-md-6 col-lg-4">
+            <div class="card mb-3">
+                <div class="card-body shadow">
+                    <h5 class="card-title">ID: {{ reservas.id }}</h5>
+                    <p class="card-text"><strong>Entrada Habitación:</strong> {{ reservas.fechaInicio|date('Y-m-d H:i:s') }}</p>
+                    <p class="card-text"><strong>Salida Habitación:</strong> {{ reservas.fechaFin|date('Y-m-d H:i:s') }}</p>
+                    <p class="card-text"><strong>Número Habitación:</strong> {{ reservas.habitacion.numero }}</p>
+                    <p class="card-text"><strong>DNI Cliente:</strong> {{ reservas.cliente.dni }}</p>
+                    <p class="card-text"><strong>Activo:</strong> {{ reservas.activo ? 'Sí' : 'No' }}</p>
+                    <div class="btn-group" role="group" aria-label="Acciones">
+                        <a href="{{ path('app_reservas_editar', {'id': reservas.id}) }}" class="btn btn-warning">Editar</a>
+                        <form action="{{ path('app_eliminar_reserva', {'id': reservas.id}) }}" method="post" onsubmit="return confirm('¿Estás seguro de que quieres eliminar esta reserva?')">
+                            <button type="submit" class="btn btn-danger">Eliminar</button>
+                        </form>
+                        <form action="{{ path('app_borrar_logico_reserva', {'id': reservas.id}) }}" method="post" onsubmit="return confirm('¿Estás seguro de que quieres borrar lógicamente esta reserva?')">
+                            <button type="submit" class="btn btn-secondary">Borrar Lógicamente</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section   >  
+
+{% endblock %}
