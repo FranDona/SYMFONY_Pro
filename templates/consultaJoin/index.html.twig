@@ -10,8 +10,8 @@
                 <div class="card shadow">
                     <div class="card-body">
                         <h5 class="card-title">Número Habitación: {{ resultado.numero_habitacion }}</h5>
-                        <p class="card-text">Fecha de Inicio: {{ resultado.fechaInicio|date('Y-m-d H:i:s') }}</p>
-                        <p class="card-text">Fecha de Fin: {{ resultado.fechaFin|date('Y-m-d H:i:s') }}</p>
+                        <p class="card-text">Fecha de Inicio: {{ resultado.fechaInicio|date('d-m-Y H:i') }}</p>
+                        <p class="card-text">Fecha de Fin: {{ resultado.fechaFin|date('d-m-Y H:i') }}</p>
                         <p class="card-text">DNI Cliente: {{ resultado.dni_cliente }}</p>
                     </div>
                 </div>

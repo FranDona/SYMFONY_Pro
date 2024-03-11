@@ -17,7 +17,6 @@ class InsertarHabitacionesType extends AbstractType
             ->add('numero', NumberType::class, [
                 'attr' => [
                     'class' => 'form-control',
-                    'readonly' => true // Hace que el campo sea de solo lectura
                 ]
             ])
             ->add('precioNoche', NumberType::class, [

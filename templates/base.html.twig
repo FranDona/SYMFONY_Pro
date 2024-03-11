@@ -26,7 +26,7 @@
         </button>
 
         <!-- Contenido del navbar -->
-        <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+        <div class="collapse navbar-collapse justify-content-center " id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="text-warning nav-link active" aria-current="page" href="http://localhost:8000"><i class="fas fa-home fa-lg"></i>&nbsp; Home</a>
@@ -35,35 +35,35 @@
                     <a class="text-warning nav-link" href="http://localhost:8000/habitaciones/consultar"><i class="fa-solid fa-person-shelter fa-lg"></i>&nbsp; Ver Habitaciones</a>
                 </li>
 
-                <li class="nav-item dropdown ms-5 ">
+                <li class="nav-item dropdown ms-5">
                     <a class="text-warning nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="fa-solid fa-unlock-keyhole"></i> ZONA EMPLEADOS
                     </a>
                     <ul class="dropdown-menu bg-dark">
                         <li><a class="text-warning dropdown-item" href="http://localhost:8000/habitaciones/insertar"><i class="fa-solid fa-person-shelter"></i> Añadir nuevas habitaciones</a></li>
-                        <li><a class="text-warning dropdown-item" href="http://localhost:8000/clientes/insertar"><i class="fa-solid fa-person-walking-arrow-right"></i> Añadir nuevos clientes</a></li>
+                        <li><a class="text-warning dropdown-item" href="http://localhost:8000/clientes/insertar"><i class="fa-solid fa-person-circle-plus"></i> Añadir nuevos clientes</a></li>
                         <li><a class="text-warning dropdown-item" href="http://localhost:8000/reservas/insertar"><i class="fa-solid fa-book-medical"></i> Crear una reserva</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="text-warning nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fa-solid fa-unlock-keyhole"></i> Vista JSONs
-                    </a>
-                    <ul class="dropdown-menu bg-dark">
-                        <li><a class="text-warning dropdown-item" href="http://localhost:8000/habitaciones/consultarJSON"  target="_blank"><i class="fa-solid fa-person-shelter"></i> Ver Habitaciones JSON </a></li>
-                        <li><a class="text-warning dropdown-item" href="http://localhost:8000/clientes/consultarJSON"  target="_blank"><i class="fa-solid fa-person-walking-arrow-right"></i> Ver Clientes JSON</a></li>
-                        <li><a class="text-warning dropdown-item" href="http://localhost:8000/reservas/consultarJSON"  target="_blank"><i class="fa-solid fa-book-medical"></i> Ver Reservas JSON</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="text-warning nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fa-solid fa-unlock-keyhole"></i> Vista TWIG
+                        <i class="fa-solid fa-eye"></i> Vista TWIG
                     </a>
                     <ul class="dropdown-menu bg-dark">
                         <li><a class="text-warning dropdown-item" href="http://localhost:8000/habitaciones/consultar"><i class="fa-solid fa-person-shelter"></i> Lista de Habitaciones </a></li>
                         <li><a class="text-warning dropdown-item" href="http://localhost:8000/clientes/consultar"><i class="fa-solid fa-person-walking-arrow-right"></i> Lista Clientes</a></li>
                         <li><a class="text-warning dropdown-item" href="http://localhost:8000/reservas/consultar"><i class="fa-solid fa-book-medical"></i> Lista de Reservas</a></li>
-                        <li><a class="text-warning dropdown-item" href="http://localhost:8000/consultaJOIN"><i class="fa-solid fa-book-medical"></i> Datos de la reserva (JOIN)</a></li>
+                        <li><a class="text-warning dropdown-item" href="http://localhost:8000/consultaJOIN"><i class="fa-solid fa-bookmark"></i></i> Datos de la reserva (JOIN)</a></li>
+                    </ul>
+                </li>
+                                <li class="nav-item dropdown">
+                    <a class="text-warning nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-code"></i> Vista JSONs
+                    </a>
+                    <ul class="dropdown-menu bg-dark">
+                        <li><a class="text-warning dropdown-item" href="http://localhost:8000/habitaciones/consultarJSON"  target="_blank"><i class="fa-solid fa-person-shelter"></i> Ver Habitaciones JSON </a></li>
+                        <li><a class="text-warning dropdown-item" href="http://localhost:8000/clientes/consultarJSON"  target="_blank"><i class="fa-solid fa-person-walking-arrow-right"></i> Ver Clientes JSON</a></li>
+                        <li><a class="text-warning dropdown-item" href="http://localhost:8000/reservas/consultarJSON"  target="_blank"><i class="fa-solid fa-book-medical"></i> Ver Reservas JSON</a></li>
                     </ul>
                 </li>
             </ul>

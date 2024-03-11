@@ -11,8 +11,8 @@
             <div class="card mb-3">
                 <div class="card-body shadow">
                     <h5 class="card-title">ID: {{ reservas.id }}</h5>
-                    <p class="card-text"><strong>Entrada Habitación:</strong> {{ reservas.fechaInicio|date('Y-m-d H:i:s') }}</p>
-                    <p class="card-text"><strong>Salida Habitación:</strong> {{ reservas.fechaFin|date('Y-m-d H:i:s') }}</p>
+                    <p class="card-text"><strong>Entrada Habitación:</strong> {{ reservas.fechaInicio|date('d-m-Y H:i') }}</p>
+                    <p class="card-text"><strong>Salida Habitación:</strong> {{ reservas.fechaFin|date('d-m-Y H:i') }}</p>
                     <p class="card-text"><strong>Número Habitación:</strong> {{ reservas.habitacion.numero }}</p>
                     <p class="card-text"><strong>DNI Cliente:</strong> {{ reservas.cliente.dni }}</p>
                     <p class="card-text"><strong>Activo:</strong> {{ reservas.activo ? 'Sí' : 'No' }}</p>
